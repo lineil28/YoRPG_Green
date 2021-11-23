@@ -1,40 +1,29 @@
-public class Protagonist{
-	private String name;
-	public int health = 1;
-	public int damage;
-	public boolean defense;
-
-
-	public Protagonist(String name){
-		this.name = name;
+public class Protagonist extends Character{
+	public String name;
+	public final int originalDefense;
+	public final double originalAttackRating;
+	
+	public Protagonist(String n){
+		name = n;
+		health=100;
+		strength=20;
+		defense=5;
+		attackRating=0.6;
+		originalDefense = defense;
+		originalAttackRating = attackRating;
 	}
-	public boolean isAlive(){
-	return (health>0);
-	}
 
-	public  void specialize(){
-	damage=20;
-	health= 100;
-	defense=false;
-	}
 	public  void normalize(){
-	damage=10;
-	health=100;
-	defense=true;
+		defense = originalDefense;
+		attackRating = originalAttackRating;
 	}
-
-	public boolean getDefense(){
-	return defense;
+	
+	public  void specialize(){
+		defense = 1;
+		attackRating = 1.0;
 	}
-
-	public int getHealth(){
-	return health;
-	}
-	public int attack(Monster m){
-		m.health -= damage;
-		return damage;
-	}
+	
 	public String getName(){
 		return name;
 	}
-}	
+}
