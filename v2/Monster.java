@@ -17,22 +17,27 @@ public class Monster extends Character{
 			health=100;
 			strength=20;
 			defense=10;
+			attackRating=1;
 		} else if(type == "troll") {
 			health=25;
 			strength=10;
 			defense=5;
+			attackRating=1;
 		} else if(type == "vampire") {
 			health=50;
 			strength=20;
 			defense=15;
+			attackRating=1;
 		} else if(type == "gambler") {
 			health=50;
 			strength=20;
 			defense=10;
+			attackRating=1;
 		} else if(type == "predator") {
 			health=40;
 			strength=20;
 			defense=5;
+			attackRating=1;
 		}
 		timer = 0;
 	}
@@ -42,7 +47,6 @@ public class Monster extends Character{
 		if(type == "brute") {
 			timer = (timer+1)%2;
 			if(timer==0) {
-				attackRating = Math.random();
 				int damage = (int) (Math.max(0, strength * attackRating - c.getDefense()));
 				c.lowerHP(damage);
 				return damage;
@@ -58,7 +62,6 @@ public class Monster extends Character{
 			int numAttacks = (int)(6*Math.random());
 
 			for(int i=0; i < numAttacks; i++) {
-				attackRating = Math.random();
 				int currentDamage = (int) (Math.max(0, strength * attackRating - c.getDefense()));
 				System.out.println("Bonk!");
 				c.lowerHP(damage);
@@ -72,7 +75,6 @@ public class Monster extends Character{
 				}
 				return damage;
 			} else if(type == "vampire") {
-				attackRating = Math.random();
 				int damage= (int) (Math.max(0, strength * attackRating - c.getDefense()));
 				c.lowerHP(damage);
 				if(Math.random()<0.5) {
@@ -104,7 +106,6 @@ public class Monster extends Character{
 					return 0;
 				}
 			} else if(type == "predator") {
-				attackRating = Math.random();
 				int damage= (int) (Math.max(0, strength * attackRating - c.getDefense()));
 				c.lowerHP(damage);
 				if(damage>0) {
