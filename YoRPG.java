@@ -136,7 +136,7 @@ public class YoRPG {
             i = Integer.parseInt( in.readLine() );
             break;
           }
-          catch ( IOException e ) {
+          catch ( Exception e ) {
             System.out.println("Thy hath not picked a valid option.");
           }
         }
