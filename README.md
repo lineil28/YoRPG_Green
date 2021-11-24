@@ -3,7 +3,7 @@
 
 New Classes- We implented 5 different Monster classes, and 3 different Protagonist classes. 
 ### Monsters ###
-* Brute- High health, but attacks every other turn.
+* Brute- Base monster, but with a bit more health than normal
 * Troll- Low health, damage, and accuracy, but can attack up to 5 times in a single turn. 
 * Vampire- Has the chance to gain 50% of the attack damage dealt in a turn. 
 * Gambler- Flips a coin, determining whether the Gambler attacks itself or the protagonist. 
