@@ -26,3 +26,7 @@ New Classes- We implented 5 different Monster classes, and 3 different Protagoni
 * introduce items
 * make monsters drop items at different rates (common, rare, epic, legendary items etc...)
 * visuals? (pixel art?)
+<<<<<<< HEAD
+=======
+
+>>>>>>> cfd7f10e02f7b88f1761c504a0ae18eaf523946e
