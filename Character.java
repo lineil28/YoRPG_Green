@@ -22,7 +22,7 @@ public class Character{
     }
 
     public int swing(Character c) {
-        int damage = (int) (Math.max(0, Math.random()*critical + strength - c.getDefense()));
+        int damage = (int) (Math.max(1, Math.random()*critical + strength - c.getDefense()));
         c.lowerHP(damage);
         return damage;
     }
