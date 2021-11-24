@@ -25,7 +25,7 @@ public class Vampire extends Monster {
         }
     }
 
-    public static void about() {
+    public void about() {
         System.out.println("The vampire has a chance to regain health equal to half the amount of damage dealt, if it doesn't miss. It's accuracy is mediocore, but has the potential to do more damage in one turn.");
     }
 }
