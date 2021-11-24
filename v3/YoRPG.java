@@ -1,4 +1,5 @@
 /**********************************************
+ * Team Green - Abdullah Faruque, Neil Lin, Russell Goychayev
  * class YoRPG -- Driver file for Ye Olde Role Playing Game.
  * Simulates monster encounters of a wandering adventurer.
  * Required classes: Protagonist, Monster
@@ -14,6 +15,7 @@
  *
  * QCC:
  *
+ * OUR DRIVER MODS: added ability to choose a class and Smaug is now equal to Monster.createMonster() which chooses a random monster type
  **********************************************/
 
 import java.io.*;
@@ -84,8 +86,23 @@ public class YoRPG {
     }
     catch ( IOException e ) { }
 
+    //adding choosing protagonist class here
+    s = "\nChoose your class: \n";
+    s += "\t1: Knight\n";
+    s += "\t2: Assassin\n";
+    s += "\t3: Shield\n";
+    s += "Selection: ";
+    System.out.print( s );
+    int playerClass = 0;
+    try {
+	    playerClass = Integer.parseInt( in.readLine() );
+    }
+    catch ( IOException e ) { }
+
     //instantiate the player's character
-    pat = new Protagonist( name );
+    pat = Protagonist.createPlayer(name, playerClass);
+
+    pat.about(); //prints out the about string of the class you selected
 
   }//end newGame()
 
@@ -105,7 +122,7 @@ public class YoRPG {
     else {
 	    System.out.println( "\nLo, yonder monster approacheth!" );
 
-	    smaug = new Monster();
+	    smaug = Monster.createMonster(); //implemented new static createMonster() method that chooses a random monster type
 
 	    while( smaug.isAlive() && pat.isAlive() ) {
 
@@ -130,8 +147,7 @@ public class YoRPG {
         System.out.println( "\n" + pat.getName() + " dealt " + d1 +
                             " points of damage.");
 
-        System.out.println( "\n" + "Ye Olde Monster smacked " + pat.getName() +
-                            " for " + d2 + " points of damage.");
+        System.out.println( "\nYe Olde Monster dealt " + d2  + " points of damage to "+ pat.getName() + "."); //edited text to make it more inclusive to the monster types
 	    }//end while
 
 	    //option 1: you & the monster perish

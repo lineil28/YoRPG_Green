@@ -1,0 +1,14 @@
+// Team Green: Abdullah Faruque, Neil Lin, Russell Goychayev 
+// APCS
+// L01: An Adventurer is You!
+// 2021-11-24
+// time spent- 1 hours
+
+
+notes...
+v3-The last and final version, with 3 new protagonist classes, under Protagonist. Each type of monster was made into its own subclass under Monster. Instance variables were slightly revamped. Critical is how much extra damage you do ontop of your strength, making strength the minimum amount of damage. Accuracy is a double representing the chances of one missing their attack. These variables were implemented to make attacks feel impactful. 
+for the gambler...
+"The gambler bets on %s.%n", guess == 0 ? "heads" : "tails"
+
+when guess is equal to 0, heads will be returned. When it is not equal to 0, tails happens instead.
+this is done for the coin flip aswell. 

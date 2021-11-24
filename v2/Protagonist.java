@@ -24,5 +24,6 @@ public class Protagonist extends Character{
 	
 	public String getName(){
 		return name;
+		joejoejoejoe
 	}
 }
