@@ -129,13 +129,17 @@ public class YoRPG {
         // Give user the option of using a special attack:
         // If you land a hit, you incur greater damage,
         // ...but if you get hit, you take more damage.
-        try {
-          System.out.println( "\nDo you feel lucky?" );
-          System.out.println( "\t1: Nay.\n\t2: Aye!" );
-          i = Integer.parseInt( in.readLine() );
+        for (;;) {
+          try {
+            System.out.println( "\nDo you feel lucky?" );
+            System.out.println( "\t1: Nay.\n\t2: Aye!" );
+            i = Integer.parseInt( in.readLine() );
+            break;
+          }
+          catch ( Exception e ) {
+            System.out.println("Thy hath not picked a valid option.");
+          }
         }
-        catch ( IOException e ) { }
-
         if ( i == 2 )
           pat.specialize();
         else
