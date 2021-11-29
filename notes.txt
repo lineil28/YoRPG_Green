@@ -3,7 +3,7 @@
 // L01: An Adventurer is You!
 // 2021-11-24
 // time spent- 1 hours
-// DISCO- 
+// DISCO- not much "extra code" was needed for this project, for our group atleast. 
 // QCC- when will we touch this lab again for further implications? Upon browsing the intertrash, I came upon switch statements, but am unsure of their use for this.
 
 notes...
@@ -12,4 +12,6 @@ for the gambler...
 "The gambler bets on %s.%n", guess == 0 ? "heads" : "tails"
 
 when guess is equal to 0, heads will be returned. When it is not equal to 0, tails happens instead.
-this is done for the coin flip aswell. 
+this is done for the coin flip aswell.
+
+the usage of Math.min for mana allowed me to make sure one's mana did not suprass 50.  
